@@ -1,0 +1,28 @@
+.details {
+    display: grid;
+    grid-row-gap: 15px;
+
+    &__title {
+        padding-bottom: 7px;
+        border-bottom: 1px solid #666;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    &__links{
+        display: grid;
+        grid-row-gap: 10px;
+        font-size: 14px;
+        transition: 2.6s ease-in-out;
+        
+        & > * {
+            
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+
+    
+    }
+}

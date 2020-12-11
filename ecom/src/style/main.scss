@@ -13,13 +13,14 @@
 @import 'auth/signup';
 @import 'page-title';
 @import 'form-fields';
+@import 'details';
 
 
 html {
     font-size: 62.5%; // 1rem is 10px
 }
 
-body{
+body {
     font-family: 'Opens Sans';
     color: #808080;
 }
