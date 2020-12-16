@@ -4,7 +4,7 @@ import PageTitle from '../pagetitle';
 
 class SignIn extends Component {
 
-    onSubmit= (fields) => {
+    onSubmit = (fields) => {
         console.log(fields)
     }
 

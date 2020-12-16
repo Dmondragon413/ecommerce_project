@@ -48,7 +48,7 @@ class SignUpForm extends Component {
                 component={FormInput}/>
                 
                 <Field className='sign-up-form__confirm'
-                type='comfirm-password'
+                type='password'
                 title='Comfirm Password'
                 placeholder='Comfirm Password'
                 name='comfirm'
@@ -59,7 +59,7 @@ class SignUpForm extends Component {
                 <div className='sign-up-form__line'></div>
 
                 <Field className='sign-up-form__login'
-                onClick={() => history.push('/account')}
+                onClick={() => history.push('/account'), console.log(history)}
                 type='submit'
                 title='Create account'
                 name='login'
