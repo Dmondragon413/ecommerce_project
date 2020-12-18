@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import history from '../../history';
 
 import { connect } from 'react-redux';
 
@@ -11,7 +12,7 @@ class Header extends Component {
                     {
                         this.props.headerLinks.map((link, index) => {
                             return (
-                                <a className='header_links' key={index} onClick={() => console.log('trynna switch tabs')}>
+                                <a className='header_links' key={index} onClick={() => history.push(link.path)}>
                                     {link.title}
                                 </a>
                             )
