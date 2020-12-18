@@ -3,7 +3,7 @@ import SignInForm from './signinform';
 import PageTitle from '../pagetitle';
 
 import { connect } from 'react-redux';
-import * as actions from '../../actions';
+import * as actions from '../../actions'; // IS THIS IMPORTING ALL FILES THAT EXIST IN THE ACIONS FOLDER??
 
 class SignIn extends Component {
 
@@ -13,7 +13,7 @@ class SignIn extends Component {
     }
 
     onSubmit = (fields) => {
-        console.log(fields)
+        console.log(fields)  // IT IS NOT CONSOLOE LOGGIN FIELDS, SAYS 'form submission canceled because the form is not connected'???
     }
 
 

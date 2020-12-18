@@ -26,13 +26,13 @@ class Account extends Component {
             {
                 _id: 0,
                 title: 'Purchase history',
-                actie: false,
+                actie: true,
                 component: <PurchaseHistory/>
             },
             {
                 _id: 1,
                 title: 'Account information',
-                active: true,
+                active: false,
                 component: <AccountInformation/>
             }
         ]
@@ -55,7 +55,7 @@ class Account extends Component {
     
     render() {
         return (
-            <div>
+            <div className='account'>
                 { this.renderContent()}
             </div>
         )
