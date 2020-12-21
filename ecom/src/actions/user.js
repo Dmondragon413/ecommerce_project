@@ -19,7 +19,7 @@ export function fetchUserPurchases() {
                 title: 'purchase 1',
                 total: 34.49,
                 orderNumber: 'D9878709821',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString(),
                 creditCard: '-9832',
                 user: {
                     name: 'David Mondragon',
@@ -31,7 +31,7 @@ export function fetchUserPurchases() {
                 title: 'purchase 2',
                 total: 9.39,
                 orderNumber: 'R9372239821',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString(),
                 creditCard: '-0302',
                 user: {
                     name: 'Alberto Mondragon',
@@ -43,7 +43,7 @@ export function fetchUserPurchases() {
                 title: 'purchase 3',
                 total: 23.49,
                 orderNumber: 'A6455709821',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString(),
                 creditCard: '-6552',
                 user: {
                     name: 'Ana Mondragon',
@@ -55,7 +55,7 @@ export function fetchUserPurchases() {
                 title: 'purchase 4',
                 total: 53.99,
                 orderNumber: 'D9878709821',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString(),
                 creditCard: '-1282',
                 user: {
                     name: 'Daniel Dann',
@@ -67,7 +67,7 @@ export function fetchUserPurchases() {
                 title: 'purchase 5',
                 total: 33.84,
                 orderNumber: 'L48472369904',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString(),
                 creditCard: '-3442',
                 user: {
                     name: 'Samie Castro',
@@ -79,7 +79,7 @@ export function fetchUserPurchases() {
                 title: 'purchase 6',
                 total: 53.49,
                 orderNumber: 'P0038334432',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString(),
                 creditCard: '-4555',
                 user: {
                     name: 'Sidney Aguirre',
@@ -91,7 +91,7 @@ export function fetchUserPurchases() {
                 title: 'purchase 7',
                 total: 63.49,
                 orderNumber: 'E44321821',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString(),
                 creditCard: '-2398',
                 user: {
                     name: 'Kyle Gomez',
@@ -103,7 +103,7 @@ export function fetchUserPurchases() {
                 title: 'purchase 8',
                 total: 40.89,
                 orderNumber: 'D9878709821',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString(),
                 creditCard: '-3232',
                 user: {
                     name: 'Benjy Horreta',
