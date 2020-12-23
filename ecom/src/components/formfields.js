@@ -19,7 +19,26 @@ export class FormButton extends Component {
         const { className, title, type, onClick, input, short } = this.props;
         return (
             <div className={`${className} form-button`}>
+                {/* <label className='form-input__label'>{title}</label> */}
                 <button className={`form-button__button ${short ? 'form-button__gray-button' : ''}`} 
+                        type={type}
+                        {...input}
+                        onClick={onClick}>
+                    
+                    {title}
+                </button>
+            </div>
+        )
+    }
+}
+
+export class LongGrayButton extends Component {
+    render() {
+        const { className, title, type, onClick, input } = this.props;
+        return (
+            <div className={`${className} form-button-long-gray `}>
+                <label className='form-button-long-gray__label'>{title}</label>
+                <button className={`form-button-long-gray__button`} 
                         type={type}
                         {...input}
                         onClick={onClick}>
