@@ -1,19 +1,21 @@
 import {
-    SET_NAVBAR_LINKS
+    // SET_NAVBAR_LINKS
+    SET_SHOP_PRODUCTS
 } from '../actions/types';
 
 const INITIAL_STATE = {
     categories: [],
     selectedCategoryId: 0,
-    productsSelected: []
+    productsSelected: [],
+    products: []
 }
 
 export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
-        case SET_NAVBAR_LINKS:
+        case SET_SHOP_PRODUCTS:
             return {
                 ...state,
-                categories: action.payload
+                products: action.payload
             }
     
         default: return state
