@@ -3,11 +3,13 @@ import { reducer as form } from 'redux-form';
 
 import headerNavbar from './headernavbarreducer';
 import user from './userReducer';
+import shop from './shopreducer';
 
 const rootReducer = combineReducers({
   form,
   headerNavbar,
-  user
+  user,
+  shop
 });
 
 export default rootReducer;
