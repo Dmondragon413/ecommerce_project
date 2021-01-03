@@ -25,6 +25,13 @@ class Shop extends Component {
             // filter products with links
     }
 
+    shouldComponentUpdate(nextProps) {    // does react know that this is going to be looking into next props? how does that work ??
+        if(this.props != nextProps) { 
+            this.props.setNavbarLinks(nextProps.categories, (_id) => this.props.filterProductsWithCategoryId(_id));
+        }
+        return true                       // why return true?? what is currently false ??
+    }
+
     render() {
         return(
             <div className='shop'>
@@ -37,7 +44,10 @@ class Shop extends Component {
 }
 
 function mapStateToProps(state) {
-    return{ state }
+    const { categories } = state.shop
+    return{ 
+        categories
+     }
 }
 
 Shop = connect(mapStateToProps, actions)(Shop);
