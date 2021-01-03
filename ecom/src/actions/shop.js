@@ -6,7 +6,7 @@ import {
 } from './types';
 
 export function filterProductsWithCategoryId(_id) {
-\    return ({
+    return ({
         type: FILTER_PRODUCTS_WITH_CATEGORY_ID,
         payload: _id
     })
