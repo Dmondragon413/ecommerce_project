@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import * as actions from '../../actions';
 import { connect } from 'react-redux';
+import ShopSearchBar from './shopSearchbar';
 
 class Shop extends Component {
     componentDidMount() {
@@ -32,10 +33,15 @@ class Shop extends Component {
         return true                       // why return true?? what is currently false ??
     }
 
+    onSubmit = (fields) => {
+        console.log(fields)
+    }
+
     render() {
         return(
             <div className='shop'>
-                {/* search bar component */}
+                <ShopSearchBar onSubmit={this.onSubmit} className='shop__search-bar' />
+
                 <div className='shop__products'>
                     {
                         this.props.filteredProducts.map(product => {
