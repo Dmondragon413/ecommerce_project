@@ -16,7 +16,7 @@ class Shop extends Component {
             
         ]
 
-        this.props.setHeaderLinks(headerLinks);
+        this.props.setHeaderLinks(headerLinks);             // Soo by importing ALL actions, that is how we are able to call upon all these functions??
         this.props.fetchShopCategories();
         this.props.fetchShopProducts();
         // set the header links
@@ -26,15 +26,16 @@ class Shop extends Component {
             // filter products with links
     }
 
-    shouldComponentUpdate(nextProps) {    // does react know that this is going to be looking into next props? how does that work ??
-        if(this.props != nextProps) { 
+    shouldComponentUpdate(nextProps) {                       // does react know that this is going to be looking into next props? how does that work ??
+        if(this.props != nextProps) {                        // so if props doesn't equal to nextprops then the selected id is placed within ??
             this.props.setNavbarLinks(nextProps.categories, (_id) => this.props.filterProductsWithCategoryId(_id));
         }
-        return true                       // why return true?? what is currently false ??
+        return true                             // why return true?? what is currently false ??
     }
 
     onSubmit = (fields) => {
         console.log(fields)
+        this.props.filterProductsWithQuery(fields)
     }
 
     render() {
