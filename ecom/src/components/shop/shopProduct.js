@@ -7,7 +7,7 @@ class ShopProduct extends Component {
     render() {
         const {_id, title, description, price } = this.props;
         return(
-            <div key={_id} className='shop__product'>
+            <div key={_id} className='shop-product'>
                 <div className='shop-product__title'>
                     {title}
                 </div>
