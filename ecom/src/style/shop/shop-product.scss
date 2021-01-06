@@ -1,8 +1,18 @@
 .shop-product {
-    height: 314px;
+    height: 354px;
     width: 240px;
     background-color: white;
     box-shadow: 0 2px 20px 0 rgba(0,0,0,0.1);
+
+    display: grid;
+    grid-template-rows: 15px [title-s] 30px [title-e description-s] 1fr [description-e price-s] 25px [price-e footer-s] 65px [footer-e] 15px;
+    grid-template-columns: 15px [s] 1fr [e] 15px;
+    justify-items: start;
+    grid-row-gap: 7px;
+
+    & > * {
+        grid-column: s/e;
+    }
 
     &__title {
         color: dodgerblue;
@@ -10,11 +20,23 @@
         font-size: 16px;
         font-weight: 500;
         letter-spacing: 0.4px;
+
+        grid-row: title-s/title-e;
     }
 
     &__description {
         font-size: 13px;
         color: #333333;
+
+        grid-row: description-s/description-e;
+    }
+
+    &__price {
+        grid-row: price-s/price-e;
+    }
+    
+    &__quantity {
+        grid-row: footer-s/footer-e;
     }
 
     &__add-to-cart {
@@ -25,10 +47,13 @@
         background-color: dodgerblue;
         font-weight: 600;
         font-size: 12px;
-        margin-top: 5px;
+        margin-top: 2px;
+        
         display: grid;
+        grid-row: footer-s/footer-e;
         justify-items: center;
         align-items: center;
+        justify-self: end;
 
         transition: all 0.3s ease;
 
