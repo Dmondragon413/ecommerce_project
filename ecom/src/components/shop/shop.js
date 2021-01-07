@@ -26,12 +26,13 @@ class Shop extends Component {
             // set the navbar links
             // filter products with links
     }
-
-    shouldComponentUpdate(nextProps) {                       // does react know that this is going to be looking into next props? how does that work ??
+    // updated props being passed in
+    shouldComponentUpdate(nextProps) { 
+        // if the new props that are coming in (after some update)  and they are the SAME then they are                      // does react know that this is going to be looking into next props? how does that work ??
         if(this.props != nextProps) {                        // so if props doesn't equal to nextprops then the selected id is placed within ??
             this.props.setNavbarLinks(nextProps.categories, (_id) => this.props.filterProductsWithCategoryId(_id));
         }
-        return true                             // why return true?? what is currently false ??
+        return true                             // why return true?? what isf currently false ??
     }
 
     onSubmit = (fields) => {
