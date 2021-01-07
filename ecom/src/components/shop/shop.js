@@ -4,8 +4,18 @@ import * as actions from '../../actions';
 import { connect } from 'react-redux';
 import ShopSearchBar from './shopSearchbar';
 import ShopProduct from './shopProduct';
+import ShopCart from './shopCart';
 
 class Shop extends Component {
+
+    constructor() {
+        super();
+
+        this.state = {
+            showCart: true
+        }
+    }
+    
     componentDidMount() {
 
         const headerLinks = [
@@ -34,15 +44,19 @@ class Shop extends Component {
         }
         return true                             // why return true?? what isf currently false ??
     }
-
+ju
     onSubmit = (fields) => {
         console.log(fields)
         this.props.filterProductsWithQuery(fields)
     }
 
     render() {
+
+        return <ShopCart className='shop__cart'/>
+
         return(
             <div className='shop'>
+
                 <ShopSearchBar onSubmit={this.onSubmit} className='shop__search-bar' />
 
                 <div className='shop__products'>
@@ -54,6 +68,10 @@ class Shop extends Component {
                         })
                     }
                 </div>
+
+                {
+                    this.state.showCart ? <ShopCart className='shop__cart'/> : ''
+                }
                 {/* cart button */}
             </div>
         )
