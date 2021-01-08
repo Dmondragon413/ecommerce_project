@@ -61,3 +61,34 @@
         display: grid;
     }
 }
+
+.cart-footer {
+    &__checkout {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+
+        height: 38px;
+        width: 180px;
+        border-radius: 20px;
+        background-color: dodgerblue;
+        font-family: 'Open sans';
+        font-weight: 600;
+        color: white;
+        font-size: 18px;
+
+        transition: all 0.3s ease;
+        &:hover {
+            transform: scale(0.97);
+        }
+
+        &:active {
+            transform: scale(0.94);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+}
