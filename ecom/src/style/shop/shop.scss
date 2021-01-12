@@ -3,9 +3,9 @@
     grid-column: s/e;
 
     display: grid;
-    grid-template-rows: 15px [search-bar-s] 38px [search-bar-e products-s] 1fr [products-e];
+    grid-template-rows: 15px [search-bar-s] 38px [search-bar-e] 50px [products-s] 1fr [products-e];
     grid-template-columns: [s] minmax(100px, 1335px) [e];
-    grid-gap: 57px;
+    // grid-gap: 57px;
     justify-content: center;
 
     &__search-bar {
@@ -21,8 +21,24 @@
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
         grid-column-gap: 40px;
         grid-row-gap: 40px;
-        grid-gap: 25px;
+        // grid-gap: 25px;
+
         width: 100%;
         justify-self: center;
+    }
+
+    &__cart-button {
+        z-index: 5;
+    }
+
+    &__cart,
+    &__cart-button {
+        // grid-row: 1/-1;
+        // grid-column: 1/-1;
+        // align-self: start;
+        // justify-self: end;
+        position: absolute;
+        top: 115px;
+        right: 0px;
     }
 }
