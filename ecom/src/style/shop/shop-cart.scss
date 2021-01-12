@@ -64,6 +64,8 @@
         grid-row: products-s/products-e;
         grid-column: s/e;
         display: grid;
+        overflow-y: scroll;
+        padding-top: 40px;
     }
 
     &__footer {
