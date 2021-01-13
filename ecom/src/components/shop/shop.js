@@ -43,9 +43,9 @@ class Shop extends Component {
         if(this.props != nextProps) {                        // so if props doesn't equal to nextprops then the selected id is placed within ??
             this.props.setNavbarLinks(nextProps.categories, (_id) => this.props.filterProductsWithCategoryId(_id));
         }
-        return true                             // why return true?? what isf currently false ??
+        return true                             // why return true?? what is currently false ??
     }
-ju
+
     onSubmit = (fields) => {
         console.log(fields)
         this.props.filterProductsWithQuery(fields)

@@ -10,7 +10,6 @@
         grid-column: s/e;
         justify-self: end;
         
-        
     }
     
     &__content {
@@ -52,7 +51,9 @@
     display: grid;
     grid-template-rows: 25px [title-s] 40px [title-e products-s] 1fr [products-e footer-s] 113px [footer-e];
     grid-template-columns: [footer-s] 30px [s] 1fr [e] 30px [footer-e];
+    grid-row-gap: 5px;
 
+    
     &__title {
         grid-row: title-s/title-e;
         grid-column: s/e;
@@ -61,13 +62,14 @@
         font-family: 'Titillium Web';
         color: #e6e6e6;
     }
-
+    
     &__products {
         grid-row: products-s/products-e;
         grid-column: s/e;
         display: grid;
         overflow-y: scroll;
         padding-top: 40px;
+        grid-row-gap: 15px;
     }
 
     &__footer {
