@@ -66,49 +66,63 @@ export function fetchShopProducts() {
                 title: 'Javascript in the Browser',
                 description: `${'Then in here we want to SET_SHOP_PRODUCTS and then we obviously have to create this type. So let\'s put it up here in our import and go into our types and underneath here will say export const SET_SHOP_PRODUCTS and I know we\'re not using SET_SHOP_PRODUCTS categories but let\'s just leave it there just in case we need it at some point.'}`,
                 price: 1.89,
-                belongsTo: [0, 1]
+                belongsTo: [0, 1],
+                imageUrl: 'http://via.placeholder.com/80x80'
+
             },
             {
                 _id: 1,
                 title: 'Graph Database',
                 description: `${'Then in here we want to SET_SHOP_PRODUCTS and then we obviously have to create this type. So let\'s put it up here in our import and go into our types and underneath here will say export const SET_SHOP_PRODUCTS and I know we\'re not using SET_SHOP_PRODUCTS categories but let\'s just leave it there just in case we need it at some point.'}`,
                 price: 1.89,
-                belongsTo: [0, 1]
+                belongsTo: [0, 1],
+                imageUrl: 'http://via.placeholder.com/80x80'
+
             },
             {
                 _id: 2,
                 title: 'Full Stack Development',
                 description: `${'Then in here we want to SET_SHOP_PRODUCTS and then we obviously have to create this type. So let\'s put it up here in our import and go into our types and underneath here will say export const SET_SHOP_PRODUCTS and I know we\'re not using SET_SHOP_PRODUCTS categories but let\'s just leave it there just in case we need it at some point.'}`,
                 price: 1.89,
-                belongsTo: [0, 1, 4]
+                belongsTo: [0, 1, 4],
+                imageUrl: 'http://via.placeholder.com/80x80'
+
             },
             {
                 _id: 3,
                 title: 'Javscript Development',
                 description: `${'Then in here we want to SET_SHOP_PRODUCTS and then we obviously have to create this type. So let\'s put it up here in our import and go into our types and underneath here will say export const SET_SHOP_PRODUCTS and I know we\'re not using SET_SHOP_PRODUCTS categories but let\'s just leave it there just in case we need it at some point.'}`,
                 price: 1.89,
-                belongsTo: [0, 1]
+                belongsTo: [0, 1],
+                imageUrl: 'http://via.placeholder.com/80x80'
+
             },
             {
                 _id: 4,
                 title: 'User Interface Design',
                 description: `${'Then in here we want to SET_SHOP_PRODUCTS and then we obviously have to create this type. So let\'s put it up here in our import and go into our types and underneath here will say export const SET_SHOP_PRODUCTS and I know we\'re not using SET_SHOP_PRODUCTS categories but let\'s just leave it there just in case we need it at some point.'}`,
                 price: 1.89,
-                belongsTo: [0, 1,5]
+                belongsTo: [0, 1,5],
+                imageUrl: 'http://via.placeholder.com/80x80'
+
             },
             {
                 _id: 5,
                 title: 'User Experience Design',
                 description: `${'Then in here we want to SET_SHOP_PRODUCTS and then we obviously have to create this type. So let\'s put it up here in our import and go into our types and underneath here will say export const SET_SHOP_PRODUCTS and I know we\'re not using SET_SHOP_PRODUCTS categories but let\'s just leave it there just in case we need it at some point.'}`,
                 price: 1.89,
-                belongsTo: [0, 2]
+                belongsTo: [0, 2],
+                imageUrl: 'http://via.placeholder.com/80x80'
+
             },
             {
                 _id: 6,
                 title: 'Advanced Object Oriented Programming',
                 description: `${'Then in here we want to SET_SHOP_PRODUCTS and then we obviously have to create this type. So let\'s put it up here in our import and go into our types and underneath here will say export const SET_SHOP_PRODUCTS and I know we\'re not using SET_SHOP_PRODUCTS categories but let\'s just leave it there just in case we need it at some point.'}`,
                 price: 1.89,
-                belongsTo: [0, 6]
+                belongsTo: [0, 6],
+                imageUrl: 'http://via.placeholder.com/80x80'
+
             }
         ]
     })

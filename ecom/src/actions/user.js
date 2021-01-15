@@ -30,7 +30,8 @@ export function fetchCartProducts() {
                     title: 'Javascript in the Browser',
                     description: `${'Then in here we want to SET_SHOP_PRODUCTS and then we obviously have to create this type. So let\'s put it up here in our import and go into our types and underneath here will say export const SET_SHOP_PRODUCTS and I know we\'re not using SET_SHOP_PRODUCTS categories but let\'s just leave it there just in case we need it at some point.'}`,
                     price: 1.89,
-                    belongsTo: [0, 1]
+                    belongsTo: [0, 1],
+                    imageUrl: 'http://via.placeholder.com/80x80'
                 },
                 quantity: 2
             },
@@ -41,7 +42,8 @@ export function fetchCartProducts() {
                     title: 'Graph Database',
                     description: `${'Then in here we want to SET_SHOP_PRODUCTS and then we obviously have to create this type. So let\'s put it up here in our import and go into our types and underneath here will say export const SET_SHOP_PRODUCTS and I know we\'re not using SET_SHOP_PRODUCTS categories but let\'s just leave it there just in case we need it at some point.'}`,
                     price: 1.89,
-                    belongsTo: [0, 1]
+                    belongsTo: [0, 1],
+                    imageUrl: 'http://via.placeholder.com/80x80'
                 },
                 quantity: 1
             },

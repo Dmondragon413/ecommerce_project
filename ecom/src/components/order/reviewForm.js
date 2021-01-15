@@ -35,7 +35,7 @@ class ReviewForm extends Component {
     }
 }
 
-ReviewForm = reduxForm({
+ReviewForm = reduxForm({  // is redux form the only way to create a form?
     form: 'ReviewForm'
 })(ReviewForm);
 
