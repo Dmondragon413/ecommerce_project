@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import BluePriceTag from '../bluePriceTag';
 
 class ReviewProduct extends Component {
     render() {
@@ -10,10 +9,10 @@ class ReviewProduct extends Component {
                 <img className='review-product__image' src={imageUrl}/>
                 <div className='review-product__title'>{title}</div>
                 <div className='review-product__quantity'>{quantity}</div>
-                <BluePriceTag className='review-product__price' title={price * quantity} />
+                <div className='review-product__price'>${price * quantity}</div>
             </div>
         )
     }
 }
 
-export default ReviewProduct; 
+export default ReviewProduct;
