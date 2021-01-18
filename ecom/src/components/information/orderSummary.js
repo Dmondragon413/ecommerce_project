@@ -1,19 +1,35 @@
 import React, { Component } from 'react';
 
+import { connect } from 'react-redux';
+
 import { UnderlinedTitle, InfoTitle } from './infoHelp';
 
 class OrderSummary extends Component {
     render() {
         const { className } = this.props;
+        let subtotal = 0;
+        let tax = 0.45;
+        let amtstickers = 0;
+        this.props.cartProducts.map(cartProduct => {
+            subtotal += cartProduct.quantity * cartProduct.product.price;
+            amtstickers += cartProduct.quantity;
+        })
         return (
             <div className={`${className} order-summary`}>
-                <UnderlinedTitle className='order-summary__title'/>
-                <InfoTitle className='order-summary__subtotal' title='4 stickers' value='$7.48' />
-                <InfoTitle className='order-summary__tax-shipping' title='Taxes & Shipping' value='$0.20' />
-                <InfoTitle className='order-summary__total' title='total' value='$7.68' />
+                <UnderlinedTitle className='order-summary__title' title='Order Summary' />
+                <InfoTitle className='order-summary__subtotal' title={`${amtstickers} stickers`} value={`$${subtotal}`} />
+                <InfoTitle className='order-summary__tax-shipping' title='Taxes & Shipping' value={tax} />
+                <InfoTitle className='order-summary__total info-title-blue' title='Total' value={`${subtotal + tax}`} />
             </div>
         )
     }
 }
+
+function mapStateToProps(state) {
+    const { cartProducts } = state.user;
+    return { cartProducts }
+}
+
+OrderSummary = connect(mapStateToProps)(OrderSummary);
 
 export default OrderSummary;
