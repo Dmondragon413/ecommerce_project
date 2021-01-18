@@ -48,20 +48,20 @@
 }
 
 
-.review-details {
-    &__subtotal {
+// .review-details {
+//     &__subtotal {
 
-    }
-    &__tax {
+//     }
+//     &__tax {
 
-    }
-    &__shipping {
+//     }
+//     &__shipping {
 
-    }
-    &__total {
+//     }
+//     &__total {
 
-    }
-}
+//     }
+// }
 
 .review-detail {
     display: grid;
@@ -79,6 +79,7 @@
         grid-column: price-s/price-e;
         font-size: 18px;
         font-weight: 600;
+        text-align: right;
     }
 }
 

@@ -17,6 +17,8 @@ import SignUp from "./components/auth/signup";
 import Account from "./components/accounts/account";
 import Shop from "./components/shop/shop";
 import Review from './components/order/review';
+import Shipping from './components/information/shipping';
+import Payment from './components/information/payment';
 
 
 
@@ -29,9 +31,13 @@ function main() {
               <Route path='/' exact component={SignIn}/>
               <Route path='/signin' exact component={SignIn}/>
               <Route path='/signup' exact component={SignUp}/>
+              
               <Route path='/account' exact component={Account}/>
               <Route path='/shop' exact component={Shop}/>
+              
               <Route path='/order/review' exact component={Review}/>
+              <Route path='/information/shipping' exact component={Shipping}/>
+              <Route path='/information/payment' exact component={Payment}/>
             </Switch>
         </Layout>
       </Router>
