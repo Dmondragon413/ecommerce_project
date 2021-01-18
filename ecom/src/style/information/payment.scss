@@ -1,0 +1,54 @@
+.payment {
+    grid-row: content-s/content-e;
+    grid-column: s/e;
+
+    &__form {
+        display: grid;
+        grid-template-rows: [name-s] 64px [name-e card-s] 64px [card-e exp-ccv-s] 64px [exp-ccv-e] minmax(20px,98px) [line-s] 24px [line-e button-s] 68px [button-e];
+        grid-template-columns: [back-s] 137px [back-e space-s] 40px [space-e pay-complete-s] 1fr [pay-complete-e] 1fr;
+        grid-row-gap: 15px;
+    }
+}
+
+.payment-form {
+    &__name {
+        grid-row: name-s/name-e;
+    }
+
+    &__card {
+        grid-row: card-s/card-e;
+    }
+
+    &__ccv,
+    &__expiration {
+        grid-row: exp-ccv-s/exp-ccv-e;
+        input {
+            width: 175px;
+        }
+    }
+
+    &__ccv {
+        transform: translateX(88px);
+    }
+
+    &__line {
+        grid-row: line-s/line-e;
+        grid-column: 1/-1;
+        border-top: 1px solid #ccc;
+    }
+
+    &__pay-complete {
+        grid-row: button-s/button-e;
+        grid-column: pay-complete-s/pay-complete-e;
+    }
+
+    &__back {
+        grid-row: button-s/button-e;
+        grid-column: back-s/back-e;
+    }
+    &__order-summary {
+        grid-row: name-s;
+        grid-column: pay-complete-e/-1;
+        justify-self: end;
+    }
+}
