@@ -5,6 +5,9 @@ import PageTitle from '../pagetitle';
 import { connect } from 'react-redux';
 import * as actions from '../../actions'; // IS THIS IMPORTING ALL FILES THAT EXIST IN THE ACIONS FOLDER??
 
+import history from '../../history';
+
+
 class SignIn extends Component {
 
     componentDidMount() {
@@ -13,7 +16,8 @@ class SignIn extends Component {
     }
 
     onSubmit = (fields) => {
-        console.log(fields)  // IT IS NOT CONSOLOE LOGGIN FIELDS, SAYS 'form submission canceled because the form is not connected'???
+        this.props.signIn(fields)
+        this.props.history.push('/account');
     }
 
 

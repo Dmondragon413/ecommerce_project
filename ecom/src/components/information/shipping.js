@@ -14,6 +14,7 @@ class Shipping extends Component {
 
     onSubmit = (fields) => {
         console.log(fields);
+        this.props.history.push('/information/payment')
     }
     
     render() {

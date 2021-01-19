@@ -6,6 +6,8 @@ import { FormInput, FormButton } from '../formfields';
 import OrderSummary from './orderSummary';
 import { UnderlinedTitle } from './infoHelp';
 
+import { connect } from 'react-redux';
+
 
 import history from '../../history';
 
@@ -54,7 +56,7 @@ class PaymentForm extends Component {
                 component={FormButton}/>
                 
                 <Field className='payment-form__back'
-                onClick={() => history.push('/signin')}
+                onClick={() => history.push('/information/shipping')}
                 type='button'
                 title='Back'
                 name='back'
@@ -65,8 +67,8 @@ class PaymentForm extends Component {
 
                 <div className='payment-form__shipping-info shipping-info'>
                     <UnderlinedTitle className='shipping-info__title' title='Shipping To' />
-                    <div className='shipping-info__name small-text'>David Mondragon</div>
-                    <div className='shipping-info__address small-text'>93838 willis ave. perris, Ca 93838</div>
+                    <div className='shipping-info__name small-text'>{this.props.name}</div>
+                    <div className='shipping-info__address small-text'>{this.props.address}</div>
                 </div>
 
 
@@ -78,5 +80,12 @@ class PaymentForm extends Component {
 PaymentForm = reduxForm({
     form: 'PaymentForm'
 })(PaymentForm);
+
+function mapSateToProps(state) {
+    const { name, address } = state.user.user;
+    return { name, address }
+}
+
+PaymentForm = connect(mapSateToProps)(PaymentForm);
 
 export default PaymentForm; 
