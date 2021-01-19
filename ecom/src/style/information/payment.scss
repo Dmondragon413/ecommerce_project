@@ -37,18 +37,53 @@
         border-top: 1px solid #ccc;
     }
 
+    
+    &__back {
+        grid-row: button-s/button-e;
+        grid-column: back-s/back-e;
+    }
+    
     &__pay-complete {
         grid-row: button-s/button-e;
         grid-column: pay-complete-s/pay-complete-e;
     }
 
-    &__back {
-        grid-row: button-s/button-e;
-        grid-column: back-s/back-e;
-    }
     &__order-summary {
         grid-row: name-s;
-        grid-column: pay-complete-e/-1;
+        grid-column: pay-complete-s/-1;
         justify-self: end;
+    }
+
+    &__shipping-info {
+        grid-row: exp-ccv-s;
+        grid-column: pay-complete-s/-1;
+        justify-self: end; 
+    }
+}
+
+.small-text {
+    font-size: 12px;
+}
+
+.shipping-info {
+    width: 225px;
+    height: 150px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 24px 24px;
+    grid-row-gap: 10px;
+
+    & > * {
+        grid-column: 1/-1;
+    }
+    &__title {
+
+    }
+    &__name {
+
+    }
+    &__address {
+
     }
 }
